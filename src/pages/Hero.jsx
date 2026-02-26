@@ -77,8 +77,7 @@ const Hero = () => {
                             </a>
                             <a
                                 href="/resume.pdf"
-                                target="_blank"
-                                rel="noreferrer"
+                                download="Karunya_C_Resume.pdf"
                                 className="px-6 py-3 glass rounded-full font-medium text-gray-800 dark:text-white hover:bg-black/5 dark:hover:bg-white/10 transition-all flex items-center gap-2"
                             >
                                 Download Resume <HiDownload />
@@ -120,3 +119,6 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
