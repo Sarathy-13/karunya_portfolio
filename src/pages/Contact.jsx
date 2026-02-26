@@ -9,6 +9,7 @@ const Contact = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null); // 'success' or 'error'
+    const [submitError, setSubmitError] = useState('');
     const form = useRef();
 
     const handleChange = (e) => {
@@ -19,26 +20,33 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-
-        // Replace these with your actual EmailJS credentials from https://dashboard.emailjs.com/
-        const serviceId = 'YOUR_SERVICE_ID';
-        const templateId = 'YOUR_TEMPLATE_ID';
-        const publicKey = 'YOUR_PUBLIC_KEY';
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
         emailjs.sendForm(serviceId, templateId, form.current, publicKey)
             .then((result) => {
                 console.log('Email successfully sent!', result.text);
                 setIsSubmitting(false);
                 setSubmitStatus('success');
+                setSubmitError('');
                 setFormData({ name: '', email: '', message: '' });
 
-                setTimeout(() => setSubmitStatus(null), 5000);
+                setTimeout(() => {
+                    setSubmitStatus(null);
+                    setSubmitError('');
+                }, 5000);
             }, (error) => {
-                console.error('Failed to send email:', error.text);
+                const details = error?.text || error?.message || 'Unknown error from EmailJS';
+                console.error('Failed to send email:', error);
                 setIsSubmitting(false);
                 setSubmitStatus('error');
+                setSubmitError(details);
 
-                setTimeout(() => setSubmitStatus(null), 5000);
+                setTimeout(() => {
+                    setSubmitStatus(null);
+                    setSubmitError('');
+                }, 7000);
             });
     };
 
@@ -163,7 +171,7 @@ const Contact = () => {
                                         animate={{ opacity: 1, y: 0 }}
                                         className="mt-4 text-red-600 dark:text-red-400 text-center font-medium"
                                     >
-                                        Failed to send message. Please replace the EmailJS placeholders in the code or email me directly!
+                                        Failed to send message. {submitError || 'Please try again or email me directly.'}
                                     </motion.p>
                                 )}
                             </form>
@@ -180,3 +188,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
