@@ -5,32 +5,67 @@ import { HiOutlineAcademicCap, HiOutlineOfficeBuilding } from 'react-icons/hi';
 const Training = () => {
     const trainingData = [
         {
-            title: "Java Programming Workshop",
-            organization: "Tech Innovators Club",
-            date: "Aug 2024",
-            type: "Workshop",
-            icon: <HiOutlineAcademicCap className="text-blue-600 dark:text-blue-400 text-3xl" />
-        },
-        {
-            title: "IoT Systems & Applications",
-            organization: "Nandha Engineering College",
-            date: "Feb 2024",
+            title: "30 Days Full Stack Development",
+            organization: "Novi-Tech, CBE",
+            date: "31.07.24 to 30.08.24",
             type: "In-Plant Training",
             icon: <HiOutlineOfficeBuilding className="text-purple-600 dark:text-purple-400 text-3xl" />
         },
         {
-            title: "Web Development Bootcamp",
-            organization: "CodeAcademy Online",
-            date: "Nov 2023",
-            type: "Workshop",
-            icon: <HiOutlineAcademicCap className="text-pink-600 dark:text-pink-400 text-3xl" />
+            title: "15 Days In-plant Training",
+            organization: "\"Let's Game Tech\", Hopes Signal, Coimbatore",
+            date: "26.12.2023 to 10.01.2024",
+            type: "In-Plant Training",
+            icon: <HiOutlineOfficeBuilding className="text-purple-600 dark:text-purple-400 text-3xl" />
         },
         {
-            title: "Industrial Visit - Tech Park",
-            organization: "TIDEL Park, Coimbatore",
-            date: "Sep 2023",
+            title: "Smart Wall Climbing Robot",
+            organization: "Smart India Hackathon'24 @ Nandha Eng. College",
+            date: "2024",
+            type: "Paper Presentation",
+            icon: <HiOutlineAcademicCap className="text-orange-600 dark:text-orange-400 text-3xl" />
+        },
+        {
+            title: "YOLO V8 Model for Plant disease Prediction",
+            organization: "Sona Engineering College, Salem",
+            date: "06.12.2025",
+            type: "Paper Presentation",
+            icon: <HiOutlineAcademicCap className="text-orange-600 dark:text-orange-400 text-3xl" />
+        },
+        {
+            title: "Artificial Intelligence Workshop",
+            organization: "TOP ENGINEERS from IITM-Madras",
+            date: "02.02.2025",
+            type: "Workshop",
+            icon: <HiOutlineAcademicCap className="text-blue-600 dark:text-blue-400 text-3xl" />
+        },
+        {
+            title: "Sustainable IoT Use-cases with 5G & AWS",
+            organization: "VIT, Vellore",
+            date: "01.10.2024",
+            type: "Workshop",
+            icon: <HiOutlineAcademicCap className="text-blue-600 dark:text-blue-400 text-3xl" />
+        },
+        {
+            title: "Internet Evolution & Software Testing",
+            organization: "Madras Institute of Technology, Chennai",
+            date: "03.06.2024",
+            type: "Workshop",
+            icon: <HiOutlineAcademicCap className="text-blue-600 dark:text-blue-400 text-3xl" />
+        },
+        {
+            title: "Industrial Visit - MobiTech",
+            organization: "MobiTech Smart Solution, Erode",
+            date: "23.06.2025",
             type: "Industrial Visit",
             icon: <HiOutlineOfficeBuilding className="text-emerald-600 dark:text-emerald-400 text-3xl" />
+        },
+        {
+            title: "Smart Sand Grain Size Prediction",
+            organization: "MSME'25 @ Nandha Eng. College",
+            date: "2025",
+            type: "Paper Presentation",
+            icon: <HiOutlineAcademicCap className="text-orange-600 dark:text-orange-400 text-3xl" />
         }
     ];
 
@@ -57,6 +92,7 @@ const Training = () => {
                                 <span className={`text-xs font-semibold tracking-wider uppercase mb-3 block
                                     ${item.type === 'Workshop' ? 'text-blue-600 dark:text-blue-400' :
                                         item.type === 'In-Plant Training' ? 'text-purple-600 dark:text-purple-400' :
+                                        item.type === 'Paper Presentation' ? 'text-orange-600 dark:text-orange-400' :
                                             'text-emerald-600 dark:text-emerald-400'}`}
                                 >
                                     {item.type}

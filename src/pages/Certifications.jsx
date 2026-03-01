@@ -7,18 +7,18 @@ const Certifications = () => {
         {
             title: "Cloud Computing",
             provider: "NPTEL",
-            score: "Elite + Silver Medal",
-            description: "Completed with a consolidated score of 82%",
-            date: "Jul-Oct 2024",
+            score: "Elite",
+            description: "Completed with a score of 73%",
+            date: "Jan-Apr 2024",
             color: "from-blue-500 to-cyan-500"
         },
         {
-            title: "Design Thinking - A Primer",
+            title: "Understanding Encubation and Entrepreneurship",
             provider: "NPTEL",
-            score: "Elite Medal",
-            description: "Completed with a consolidated score of 75%",
-            date: "Feb-Mar 2024",
-            color: "from-purple-500 to-pink-500"
+            score: "Elite + Gold",
+            description: "Completed with a score of 91% (Top Level)",
+            date: "Jul-Oct 2025",
+            color: "from-yellow-500 to-orange-500"
         }
     ];
 

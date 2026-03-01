@@ -5,31 +5,17 @@ import { HiFolderOpen, HiExternalLink, HiCode } from 'react-icons/hi';
 const Projects = () => {
     const projectData = [
         {
-            title: "Smart Inventory Tracker using IoT",
-            description: "Developed a smart inventory system integrating IoT sensors for real-time tracking of goods, reducing manual errors and improving logistics efficiency.",
-            tech: ["IoT", "Sensors", "Arduino", "C++"],
-            category: "IoT",
-            link: "#"
-        },
-        {
-            title: "AI-Powered Customer Support Bot",
-            description: "Built an intelligent chatbot using NLP to handle customer queries automatically, improving response times by 40% and enhancing user satisfaction.",
-            tech: ["Python", "NLP", "Machine Learning"],
-            category: "Artificial Intelligence",
-            link: "#"
-        },
-        {
-            title: "Robotics Line Follower",
-            description: "Designed and programmed an autonomous line-following robot capable of navigating complex paths using IR sensors and a microcontroller.",
-            tech: ["Robotics", "Microcontrollers", "C"],
-            category: "Robotics",
-            link: "#"
-        },
-        {
-            title: "Online Portfolio Website",
-            description: "A modern, highly responsive personal portfolio website built with React and Tailwind CSS, featuring smooth animations and glassmorphism UI.",
-            tech: ["React.js", "Tailwind CSS", "Framer Motion"],
+            title: "WebSite for Karunyam & Company",
+            description: "Undergone a project work on 'WebSite Developing a Client Based Project Development' to Karunyam & Company, Tiruppur at Nandha Engineering College, Erode.",
+            tech: ["Web Development", "React", "Frontend"],
             category: "Web Development",
+            link: "#"
+        },
+        {
+            title: "Smart Self Balancing Robot For Elderly Patients",
+            description: "Undergone a project work on 'Smart Self Balancing Robot For Elderly Patients' at Nandha Engineering College, Erode.",
+            tech: ["Robotics", "IoT", "Hardware"],
+            category: "Robotics",
             link: "#"
         }
     ];

@@ -59,7 +59,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Desktop Menu */}
-                    <nav className="hidden md:flex space-x-6 lg:space-x-8">
+                    <nav className="hidden lg:flex space-x-6 lg:space-x-8">
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
@@ -82,7 +82,7 @@ const Navbar = () => {
                             {isDarkMode ? <HiSun size={20} /> : <HiMoon size={20} />}
                         </button>
 
-                        <div className="md:hidden flex items-center">
+                        <div className="lg:hidden flex items-center">
                             <button
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                                 className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white focus:outline-none"
@@ -102,7 +102,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-white/95 dark:bg-[#0f1016]/95 backdrop-blur-xl border-b border-gray-200 dark:border-white/10 overflow-hidden"
+                        className="lg:hidden bg-white/95 dark:bg-[#0f1016]/95 backdrop-blur-xl border-b border-gray-200 dark:border-white/10 overflow-hidden"
                     >
                         <div className="px-2 pt-2 pb-6 space-y-1 sm:px-3">
                             {navLinks.map((link) => (

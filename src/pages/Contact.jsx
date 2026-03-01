@@ -51,7 +51,7 @@ const Contact = () => {
     };
 
     const contactInfo = [
-        { icon: <HiOutlinePhone />, label: "Call Me", value: "+91 8056461944", href: "tel:+918056461944" },
+        { icon: <HiOutlinePhone />, label: "Call Me", value: "+91 8122514276", href: "tel:+91 8122514276" },
         { icon: <HiOutlineMail />, label: "Email Me", value: "karunyachelladurai7@gmail.com", href: "mailto:karunyachelladurai7@gmail.com" },
         { icon: <HiOutlineLocationMarker />, label: "Location", value: "Erode, Tamil Nadu", href: "#" }
     ];
