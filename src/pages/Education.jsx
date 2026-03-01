@@ -6,29 +6,29 @@ import { FaGraduationCap } from 'react-icons/fa';
 const Education = () => {
     const educationData = [
         {
-            degree: "Bachelor of Engineering in CSE (IoT)",
-            institution: "Nandha Engineering College (Autonomous)",
+            degree: "Bachelor of Engineering in Computer Science and Engineering(Internet of Things)Hons.",
+            institution: "Nandha Engineering College, (Autonomous), Erode.",
             location: "Erode",
             year: "2023 - 2027",
-            score: "Current CGPA: 9.7",
+            score: "CGPA: 9.7",
             status: "Pursuing",
             icon: <FaGraduationCap className="text-xl" />
         },
         {
-            degree: "Higher Secondary Certificate (HSC)",
-            institution: "Govt Girls Hr Sec School",
-            location: "Andhiyur",
-            year: "2022 - 2023",
-            score: "Percentage: 86.60%",
+            degree: "Higher Secondary School Leaving Certificate (HSLC).",
+            institution: "Veveaham Higher Secondary School, Dharapuram",
+            location: "Dharapuram",
+            year: "2021 - 2023",
+            score: "Percentage: 85%",
             status: "Completed",
             icon: <HiAcademicCap className="text-xl" />
         },
         {
-            degree: "Secondary School Leaving Certificate (SSLC)",
-            institution: "Govt Girls Hr Sec School",
-            location: "Andhiyur",
+            degree: "Secondary School Leaving Certificate (SSLC).",
+            institution: "Kingsberry Matriculation Higher Secondary School, Tiruppur",
+            location: "Tiruppur",
             year: "2020 - 2021",
-            score: "Marks: 457 / 500",
+            score: "Remarks: All Pass",
             status: "Completed",
             icon: <HiAcademicCap className="text-xl" />
         }

@@ -52,7 +52,7 @@ const Contact = () => {
 
     const contactInfo = [
         { icon: <HiOutlinePhone />, label: "Call Me", value: "+91 8056461944", href: "tel:+918056461944" },
-        { icon: <HiOutlineMail />, label: "Email Me", value: "karunyacskp@gmail.com", href: "mailto:karunyacskp@gmail.com" },
+        { icon: <HiOutlineMail />, label: "Email Me", value: "karunyachelladurai7@gmail.com", href: "mailto:karunyachelladurai7@gmail.com" },
         { icon: <HiOutlineLocationMarker />, label: "Location", value: "Erode, Tamil Nadu", href: "#" }
     ];
 
@@ -70,15 +70,15 @@ const Contact = () => {
 
                     <div className="grid lg:grid-cols-5 gap-12 items-start">
                         {/* Contact Information (Left Column) */}
-                        <div className="lg:col-span-2 space-y-8">
+                        <div className="lg:col-span-2 space-y-6 sm:space-y-8">
                             {contactInfo.map((info, index) => (
-                                <a key={index} href={info.href} className="flex items-center gap-6 glass p-6 rounded-2xl border border-gray-200 dark:border-white/5 hover:border-blue-300 dark:hover:border-blue-500/30 transition-all group">
-                                    <div className="w-14 h-14 bg-gray-100 dark:bg-white/5 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 text-2xl group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                <a key={index} href={info.href} className="flex items-center gap-4 sm:gap-6 glass p-5 sm:p-6 rounded-2xl border border-gray-200 dark:border-white/5 hover:border-blue-300 dark:hover:border-blue-500/30 transition-all group overflow-hidden">
+                                    <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-gray-100 dark:bg-white/5 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl sm:text-2xl group-hover:bg-blue-600 group-hover:text-white transition-colors">
                                         {info.icon}
                                     </div>
-                                    <div>
+                                    <div className="min-w-0 flex-1">
                                         <p className="text-gray-500 dark:text-gray-400 text-sm font-medium mb-1">{info.label}</p>
-                                        <p className="text-gray-900 dark:text-white font-semibold tracking-wide">{info.value}</p>
+                                        <p className="text-gray-900 dark:text-white font-semibold tracking-wide break-all sm:break-normal">{info.value}</p>
                                     </div>
                                 </a>
                             ))}
@@ -98,10 +98,10 @@ const Contact = () => {
 
                         {/* Contact Form (Right Column) */}
                         <div className="lg:col-span-3">
-                            <form ref={form} onSubmit={handleSubmit} className="glass p-8 md:p-10 rounded-3xl border border-gray-200 dark:border-white/5 shadow-xl">
-                                <h3 className="text-2xl font-bold font-poppins text-gray-900 dark:text-white mb-8">Send Me A Message</h3>
+                            <form ref={form} onSubmit={handleSubmit} className="glass p-6 sm:p-8 md:p-10 rounded-[2rem] border border-gray-200 dark:border-white/5 shadow-xl">
+                                <h3 className="text-2xl font-bold font-poppins text-gray-900 dark:text-white mb-6 sm:mb-8">Send Me A Message</h3>
 
-                                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                                <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
                                     <div>
                                         <label htmlFor="name" className="block text-gray-700 dark:text-gray-300 text-sm font-medium mb-2">Your Name</label>
                                         <input
@@ -129,7 +129,7 @@ const Contact = () => {
                                         />
                                     </div>
                                 </div>
-                                <div className="mb-8">
+                                <div className="mb-6 sm:mb-8">
                                     <label htmlFor="message" className="block text-gray-700 dark:text-gray-300 text-sm font-medium mb-2">Message</label>
                                     <textarea
                                         id="message"
@@ -146,7 +146,7 @@ const Contact = () => {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl flex items-center justify-center gap-3 transition-all hover:shadow-lg hover:shadow-purple-500/25 disabled:opacity-70"
+                                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl flex items-center justify-center gap-3 transition-all hover:shadow-lg hover:shadow-purple-500/25 disabled:opacity-70"
                                 >
                                     {isSubmitting ? (
                                         <span className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
